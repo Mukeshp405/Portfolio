@@ -1,0 +1,92 @@
+{% extends 'base.html' %} {% block content %}
+<section
+    class="bg-[radial-gradient(circle,_#8fccad_0%,_#2d3832_40%,_#000000_60%,_#000000_100%)]  w-full h-full pt-30 pb-10 font-bold flex flex-col items-center justify-center">
+    <h4 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+        class="text-[5rem] uppercase w-[60rem] text-center flex flex-col space-y-2 mb-16">
+        <span>Ready to take your</span>
+        <span class="flex justify-center items-center gap-4 -my-5">
+            idea to
+            <a href="#"
+                class="bg-[#7af298] text-black text-sm w-[8rem] h-[8rem] inline-flex justify-center items-center rounded-full font-bold capitalize">Start
+                Project</a>
+        </span>
+        <span>the next level?</span>
+    </h4>
+
+    <div class="flex justify-center items-center font-bold text-[10px] text-[#7af298] w-full px-4">
+        <i class="fa-solid fa-less-than"></i> <i class="fa-solid fa-slash rotate-90"></i>
+        <hr class="w-full h-0.5 bg-gray-800 border-gray-800"> <i class="fa-solid fa-greater-than"></i>
+    </div>
+
+    <div class="flex justify-between items-start mt-10 w-full px-4 uppercase">
+        <div class="flex flex-col gap-4">
+            <span class="text-green-300 capitalize">Quick Links</span>
+            <a href="{{ url_for('dashboard.index') }}">
+                <span>Home</span>
+            </a>
+            <a href="pages/about.html">
+                <span>About</span>
+            </a>
+            <a href="pages/works.html">
+                <span>Works</span>
+            </a>
+            <a href="pages/blogs.html">
+                <span>Blogs</span>
+            </a>
+            <a href="pages/contact.html">
+                <span>Contact</span>
+            </a>
+        </div>
+        <div class="flex flex-col gap-4">
+            <span class="text-green-300 capitalize">Portfolio</span>
+            <span>Contra</span>
+            <span>Github</span>
+            <span>Codepen</span>
+        </div>
+        <div class="flex flex-col gap-4">
+            <span class="text-green-300 capitalize">Social Links</span>
+            <span>Instagram</span>
+            <span>LinkedIn</span>
+            <span>Twitter "X"</span>
+            <span>WhatsApp</span>
+            <span>Email</span>
+        </div>
+    </div>
+
+    <div class="flex flex-col mt-20 w-full px-4 text-xl gap-3">
+        <span class="text-green-300 capitalize">Email: <a href="mailto:mukeshp1639@gmail.com" class="text-white underline underline-offset-6">mukeshp1639@gmail.com</a></span>
+        <span class="text-green-300 capitalize">Phone: <span class="text-white underline underline-offset-6">+91 9876543210</span></span>
+    </div>
+
+    <div class="flex justify-center items-center font-bold text-[10px] text-[#7af298] w-full px-4 mt-10">
+        <hr class="w-full h-0.4 bg-gray-700 border-gray-800">
+    </div>
+
+    <div class="flex justify-center items-center font-bold text-sm text-[#7af298] w-full px-4 mt-10">
+        <span class="text-green-300 capitalize">Designed and Developed by Mukesh Prajapati</span>
+    </div>
+
+</section>
+
+<script>
+    const roles = document.querySelectorAll(".tech-role");
+    let current = 0;
+
+    roles[0].classList.add("active");
+
+    setInterval(() => {
+        const previous = current;
+        current = (current + 1) % roles.length;
+
+        roles[previous].classList.remove("active");
+        roles[previous].classList.add("exit");
+
+        roles[current].classList.remove("exit");
+        roles[current].classList.add("active");
+
+        setTimeout(() => {
+            roles[previous].classList.remove("exit");
+        }, 500);
+    }, 2000);
+</script>
+{% endblock %}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/output.css')}}" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Iceland&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" href="{{url_for('static', filename='images/fav.png')}}" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <title>Mukesh Prajapati | Web & AI Developer</title>
+</head>
+
+<body class="relative text-white space-grotesk cursor-none">
+
+  <div id="custom-cursor"
+    class="fixed top-0 left-0 w-4 h-4 bg-[#55e57c] rounded-full pointer-events-none z-[9999] transform -translate-x-1/2 -translate-y-1/2">
+  </div>
+
+  {% include 'pages/partials/navbar.html' %}
+  {% block content %} {% endblock %}
+  <script>
+    const cursor = document.getElementById('custom-cursor');
+
+    // Mouse move event listener
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+
+    // Hide cursor when mouse leaves the window
+    document.addEventListener('mouseout', () => {
+      cursor.style.display = 'none';
+    });
+
+    // Show cursor when mouse enters the window
+    document.addEventListener('mouseover', () => {
+      cursor.style.display = 'block';
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+<section
+    class="bg-[radial-gradient(circle,_#3A5A4A_0%,_#1A241E_25%,_#111111_60%,_#000000_100%)] w-full h-full pt-20 px-6 text-2xl font-bold">
+    <!-- <h4>Hey;👋 I'm a Python Full Stack & AI Developer</h4> -->
+    <h4 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" class="flex items-center gap-2">
+        Hey;👋 I'm a
+
+        <span class="tech-role-wrapper">
+            <span class="tech-role active text-blue-500">Python Developer</span>
+            <span class="tech-role text-orange-400">AI Developer</span>
+            <span class="tech-role text-green-500">Web Developer</span>
+            <span class="tech-role text-cyan-500">React Developer</span>
+            <span class="tech-role text-purple-500">Flask Developer</span>
+            <span class="tech-role text-yellow-500">Full Stack Developer</span>
+        </span>
+    </h4>
+    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" class=" text-[9rem] text-[#7af298]">MUKESH PRAJAPATI</h1>
+    <div class="flex items-center justify-between -mt-10 relative">
+        <div class="text-lg w-full flex flex-col gap-2 font-normal">
+            <div class="flex items-center gap-3 rotate-270 absolute -right-15 top-0 font-bold">
+                SCROLL
+                <div class="w-[100px] bg-green-400 h-[1px] overflow-hidden">
+                    <div class="w-[30px] h-[1.5px] bg-white animate-slide -translate-x-20"></div>
+                </div>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" class="mt-8">
+                I craft fast, scalable, and user-friendly web applications with modern JavaScript frameworks — combining
+                React on the frontend with robust server-side solutions using Node.js.
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" class="flex gap-4 mt-12">
+                <span class="text-green-500">/</span><a href="#">Twitter[X]</a>
+                <span class="text-green-500">/</span>LinkedIn
+                <span class="text-green-500">/</span>GitHub
+                <span class="text-green-500">/</span>CodePen
+            </div>
+        </div>
+        <img src="{{url_for('static', filename='images/img15.png')}}" alt="" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1500" class="w-130 bottom-shadow shadow-black">
+        <div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-[16px] w-full flex flex-col gap-2 text-right">
+            <span>Email: <span class="text-[#7af298]">mukeshp1639@gmail.com</span></span>
+            <span>Phone:  <span class="text-[#7af298]">+91 9876543210</span></span>
+        </div>
+    </div>
+</section>
+{% include 'pages/skills.html' %}
+{% include 'pages/projects.html' %}
+{% include 'pages/footer.html' %}
+
+<script>
+const roles = document.querySelectorAll('.tech-role');
+let current = 0;
+
+roles[0].classList.add('active');
+
+setInterval(() => {
+    const previous = current;
+    current = (current + 1) % roles.length;
+
+    roles[previous].classList.remove('active');
+    roles[previous].classList.add('exit');
+
+    roles[current].classList.remove('exit');
+    roles[current].classList.add('active');
+
+    setTimeout(() => {
+        roles[previous].classList.remove('exit');
+    }, 500);
+
+}, 2000);
+</script>
+{% endblock %}
