@@ -1,14 +1,16 @@
-<nav class="px-4 top-0 w-full pt-6 fixed z-50">
-    <div class="flex justify-between h-16">
-        <a href="{{ url_for('dashboard.index') }}" class="text-white font-bold text-lg">MUKESH PRAJAPATI</a>
-        <!-- <a href="{{ url_for('dashboard.index') }}">
-            <img src="{{url_for('static', filename='images/fav.png')}}" alt="Logo" class="w-20 h-10">
-        </a> -->
+<nav class="px-6 md:px-12 lg:px-24 top-0 w-full pt-6 md:pt-8 fixed z-50 pointer-events-none">
+    
+    <div class="flex justify-between items-center h-16 pointer-events-auto">
+        
+        <a href="{{ url_for('dashboard.index') }}" class="text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide hover:text-green-400 transition-colors">
+            MUKESH PRAJAPATI
+        </a>
+        
         <div>
             <button
-                class="bg-white text-black px-4 py-2 rounded-full w-32 font-bold flex justify-between">
+                class="bg-white text-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-full w-24 sm:w-32 text-sm sm:text-base font-bold flex justify-between items-center hover:bg-green-400 hover:scale-105 transition-all duration-300 group">
                 Menu 
-                <span class="font-normal"><></span>
+                <span class="font-normal text-gray-500 group-hover:text-black transition-colors">&lt;&gt;</span>
             </button>
         </div>
     </div>

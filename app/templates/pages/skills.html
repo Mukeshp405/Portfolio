@@ -1,325 +1,335 @@
-<section class="bg-[radial-gradient(circle_at_top,_#1A241E_5%,_#111111_60%,_#000000_100%)] px-24 pt-20">
-    <div class="container mx-auto px-4 py-12">
-        <h1 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" class="font-bold mb-8 text-green-400">// Skills</h1>
-        <div class="flex w-full gap-24 mb-16">
-            <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" class="flex items-center justify-between gap-12 mb-12 w-3/5">
-                <div class="border-b border-gray-600 pb-3 pr-3 w-full">
-                    <h1 class="text-5xl font-bold">2+</h1>
-                    <p class="text-green-400">Years of Experience</p>
+<section class="bg-[radial-gradient(circle_at_top,_#1A241E_5%,_#111111_60%,_#000000_100%)] px-6 md:px-12 lg:px-24 pt-20">
+    <div class="container mx-auto py-12">
+        <h1 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" class="font-bold mb-8 text-green-400 text-2xl">// Skills</h1>
+        
+        <div class="flex flex-col lg:flex-row w-full gap-12 lg:gap-24 mb-16">
+            
+            <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" class="flex flex-col sm:flex-row items-center justify-between gap-8 lg:gap-12 w-full lg:w-2/5">
+                <div class="border-b border-gray-600 pb-3 pr-3 w-full text-center sm:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold">2+</h1>
+                    <p class="text-green-400 text-sm md:text-base">Years of Experience</p>
                 </div>
-                <div class="border-b border-gray-600 pb-3 pr-3 w-full">
-                    <h1 class="text-5xl font-bold">6+</h1>
-                    <p class="text-green-400">Completed Projects</p>
+                <div class="border-b border-gray-600 pb-3 pr-3 w-full text-center sm:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold">6+</h1>
+                    <p class="text-green-400 text-sm md:text-base">Completed Projects</p>
                 </div>
             </div>
-            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" class="w-full">
-                <p class="text-lg text-gray-400">
+            
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" class="w-full lg:w-3/5 flex flex-col items-center sm:items-start text-center sm:text-left">
+                <p class="text-base md:text-lg text-gray-400">
                     I thrive on solving real-world problems, turning ideas into clean, maintainable code, and learning
                     through experimentation. You’ll find me building side projects, diving into new tech stacks, or
                     simply exploring what’s next in the world of web development.
                 </p>
-                <a href="{{ url_for('static', filename='resume/resume.pdf') }}" target="_blank">
-                    <button class="bg-green-400 text-black font-bold py-2 px-4 rounded hover:bg-green-500 mt-8">
+                <a href="{{ url_for('static', filename='resume/resume.pdf') }}" target="_blank" class="mt-8 inline-block">
+                    <button class="bg-green-400 text-black font-bold py-3 px-6 rounded hover:bg-green-500 transition-colors">
                         My Resume
                     </button>
                 </a>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-4">
+            
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="100"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/HTML5.png')}}" alt="HTML5"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">HTML5</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">HTML5</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="200"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/CSS3.png')}}" alt="CSS3"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">CSS3</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">CSS3</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="300"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/JavaScript.png')}}" alt="JavaScript"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">JavaScript</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">JavaScript</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="400"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Tailwind CSS.png')}}" alt="Tailwind CSS"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Tailwind CSS</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Tailwind CSS</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="500"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Bootstrap.png')}}" alt="Bootstrap"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Bootstrap</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Bootstrap</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="600"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Material UI.png')}}" alt="Material UI"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Material UI</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Material UI</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="700"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/React.png')}}" alt="React"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">React</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">React</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="800"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Vite.png')}}" alt="Vite"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Vite</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Vite</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="900"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/python.png')}}" alt="Python"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Python</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Python</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1000"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Flask.png')}}" alt="Flask"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Flask</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Flask</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1100"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/restAPI.png')}}" alt="REST API"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">REST API</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">REST API</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1200"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
-                <img src="{{url_for('static', filename='programming icons/C.png')}}" alt="C" class="w-16 h-16 mb-4">
-                <span class="text-center">C</span>
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
+                <img src="{{url_for('static', filename='programming icons/C.png')}}" alt="C" 
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">C</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1300"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
-                <img src="{{url_for('static', filename='programming icons/cpp.png')}}" alt="C++" class="w-16 h-16 mb-4">
-                <span class="text-center">C++</span>
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
+                <img src="{{url_for('static', filename='programming icons/cpp.png')}}" alt="C++" 
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">C++</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1400"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Java.png')}}" alt="Java"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Java</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Java</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1500"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Django.png')}}" alt="Django"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Django</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Django</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1600"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/FastAPI.png')}}" alt="FastAPI"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">FastAPI</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">FastAPI</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1700"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/MySql.png')}}" alt="MySQL"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">MySQL</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">MySQL</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1800"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/PostgresSQL.png')}}" alt="PostgresSQL"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">PostgresSQL</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">PostgresSQL</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="1900"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/MongoDB.png')}}" alt="MongoDB"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">MongoDB</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">MongoDB</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2000"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/SQLAlchemy.png')}}" alt="SQLAlchemy"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">SQLAlchemy</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">SQLAlchemy</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2100"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/SQLite.png')}}" alt="SQLite"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">SQLite</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">SQLite</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2200"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/NGINX.png')}}" alt="NGINX"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">NGINX</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">NGINX</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2300"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
-                <img src="{{url_for('static', filename='programming icons/AWS.png')}}" alt="AWS" class="w-16 h-16 mb-4">
-                <span class="text-center">AWS</span>
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
+                <img src="{{url_for('static', filename='programming icons/AWS.png')}}" alt="AWS" 
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">AWS</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2400"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Digital Ocean.png')}}" alt="DigitalOcean"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">DigitalOcean</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">DigitalOcean</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2500"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Hostinger.png')}}" alt="Hostinger"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Hostinger</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Hostinger</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2600"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
-                <img src="{{url_for('static', filename='programming icons/Git.png')}}" alt="Git" class="w-16 h-16 mb-4">
-                <span class="text-center">Git</span>
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
+                <img src="{{url_for('static', filename='programming icons/Git.png')}}" alt="Git" 
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Git</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2700"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/GitHub.png')}}" alt="GitHub"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">GitHub</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">GitHub</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2800"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Linux.png')}}" alt="Linux"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Linux</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Linux</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="2900"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Postman.png')}}" alt="Postman"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Postman</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Postman</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3000"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Figma.png')}}" alt="Figma"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Figma</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Figma</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3100"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Canva.png')}}" alt="Canva"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Canva</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Canva</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3200"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/NumPy.png')}}" alt="NumPy"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">NumPy</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">NumPy</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3300"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Pandas.png')}}" alt="Pandas"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Pandas</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Pandas</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3400"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Matplotlib.png')}}" alt="Matplotlib"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Matplotlib</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Matplotlib</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3500"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/seaborn.png')}}" alt="Seaborn"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Seaborn</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Seaborn</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3600"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/LangChain.png')}}" alt="LangChain"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">LangChain</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">LangChain</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3700"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/scikit-learn.png')}}" alt="scikit-learn"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Scikit-Learn</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Scikit-Learn</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3800"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/OpenCV.png')}}" alt="OpenCV"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">OpenCV</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">OpenCV</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="3900"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
-                <img src="{{url_for('static', filename='programming icons/NPM.png')}}" alt="NPM" class="w-16 h-16 mb-4">
-                <span class="text-center">NPM</span>
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
+                <img src="{{url_for('static', filename='programming icons/NPM.png')}}" alt="NPM" 
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">NPM</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4000"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/JSON.png')}}" alt="JSON"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">JSON</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">JSON</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4100"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Docker.png')}}" alt="Docker"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Docker</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Docker</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4200"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Jupyter.png')}}" alt="Jupyter Notebook"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Jupyter Notebook</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Jupyter Notebook</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4300"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Oracle.png')}}" alt="Oracle"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Oracle</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Oracle</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4400"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/PyTorch.png')}}" alt="PyTorch"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">PyTorch</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">PyTorch</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4500"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Vercel.png')}}" alt="Vercel"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Vercel</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Vercel</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4600"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Streamlit.png')}}" alt="Streamlit"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Streamlit</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Streamlit</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4700"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Arduino.png')}}" alt="Arduino"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Arduino</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Arduino</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4800"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/Anaconda.png')}}" alt="Anaconda"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">Anaconda</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">Anaconda</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="4900"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/PyCharm.png')}}" alt="PyCharm"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">PyCharm</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">PyCharm</span>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="5000"
-                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400">
+                class="bg-[#1A241E] p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:outline-2 hover:outline-green-400 transition-all">
                 <img src="{{url_for('static', filename='programming icons/VScode.png')}}" alt="VScode"
-                    class="w-16 h-16 mb-4">
-                <span class="text-center">VScode</span>
+                    class="w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 object-contain">
+                <span class="text-center text-sm md:text-base">VScode</span>
             </div>
         </div>
     </div>

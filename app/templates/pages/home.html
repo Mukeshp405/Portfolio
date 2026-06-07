@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <section
-    class="bg-[radial-gradient(circle,_#3A5A4A_0%,_#1A241E_25%,_#111111_60%,_#000000_100%)] w-full h-full pt-20 px-6 text-2xl font-bold">
-    <!-- <h4>Hey;👋 I'm a Python Full Stack & AI Developer</h4> -->
-    <h4 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" class="flex items-center gap-2">
+    class="bg-[radial-gradient(circle,_#3A5A4A_0%,_#1A241E_25%,_#111111_60%,_#000000_100%)] w-full min-h-screen pt-24 px-6 lg:px-12 flex flex-col justify-center overflow-hidden">
+    
+    <h4 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" class="flex flex-wrap items-center gap-2 text-xl md:text-2xl font-bold">
         Hey;👋 I'm a
 
         <span class="tech-role-wrapper">
@@ -15,33 +16,44 @@
             <span class="tech-role text-yellow-500">Full Stack Developer</span>
         </span>
     </h4>
-    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" class=" text-[9rem] text-[#7af298]">MUKESH PRAJAPATI</h1>
-    <div class="flex items-center justify-between -mt-10 relative">
-        <div class="text-lg w-full flex flex-col gap-2 font-normal">
-            <div class="flex items-center gap-3 rotate-270 absolute -right-15 top-0 font-bold">
+
+    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-5xl sm:text-6xl md:text-8xl lg:text-[9rem] leading-none text-[#7af298] font-bold mt-6 lg:mt-2">
+        MUKESH PRAJAPATI
+    </h1>
+
+    <div class="flex flex-col lg:flex-row items-center justify-between mt-12 lg:-mt-10 relative gap-12 lg:gap-4">
+        
+        <div class="text-base md:text-lg w-full lg:w-1/3 flex flex-col gap-2 font-normal text-center lg:text-left z-10">
+            
+            <div class="hidden lg:flex items-center gap-3 rotate-270 absolute -right-15 top-0 font-bold">
                 SCROLL
                 <div class="w-[100px] bg-green-400 h-[1px] overflow-hidden">
                     <div class="w-[30px] h-[1.5px] bg-white animate-slide -translate-x-20"></div>
                 </div>
             </div>
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" class="mt-8">
+            
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" class="mt-4 lg:mt-8 text-gray-200">
                 I craft fast, scalable, and user-friendly web applications with modern JavaScript frameworks — combining
                 React on the frontend with robust server-side solutions using Node.js.
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" class="flex gap-4 mt-12">
-                <span class="text-green-500">/</span><a href="#">Twitter[X]</a>
-                <span class="text-green-500">/</span>LinkedIn
-                <span class="text-green-500">/</span>GitHub
-                <span class="text-green-500">/</span>CodePen
+            
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" class="flex flex-wrap justify-center lg:justify-start gap-4 mt-8 lg:mt-12 text-sm md:text-base">
+                <span class="text-green-500">/</span><a href="#" class="hover:text-white transition-colors">Twitter[X]</a>
+                <span class="text-green-500">/</span><a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                <span class="text-green-500">/</span><a href="#" class="hover:text-white transition-colors">GitHub</a>
+                <span class="text-green-500">/</span><a href="#" class="hover:text-white transition-colors">CodePen</a>
             </div>
         </div>
-        <img src="{{url_for('static', filename='images/img15.png')}}" alt="" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1500" class="w-130 bottom-shadow shadow-black">
-        <div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-[16px] w-full flex flex-col gap-2 text-right">
-            <span>Email: <span class="text-[#7af298]">mukeshp1639@gmail.com</span></span>
-            <span>Phone:  <span class="text-[#7af298]">+91 9876543210</span></span>
+
+        <img src="{{url_for('static', filename='images/img15.png')}}" alt="Mukesh Prajapati" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1500" class="w-64 sm:w-80 md:w-96 lg:w-130 bottom-shadow shadow-black relative z-0">
+
+        <div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" class="text-sm md:text-[16px] w-full lg:w-1/3 flex flex-col gap-2 text-center lg:text-right z-10">
+            <span>Email: <a href="mailto:mukeshp1639@gmail.com" class="text-[#7af298] hover:underline">mukeshp1639@gmail.com</a></span>
+            <span>Phone:  <a href="tel:+919876543210" class="text-[#7af298] hover:underline">+91 9876543210</a></span>
         </div>
     </div>
 </section>
+
 {% include 'pages/skills.html' %}
 {% include 'pages/projects.html' %}
 {% include 'pages/footer.html' %}

@@ -25,33 +25,41 @@
   <title>Mukesh Prajapati | Web & AI Developer</title>
 </head>
 
-<body class="relative text-white space-grotesk cursor-none">
+<body class="relative text-white space-grotesk cursor-auto md:cursor-none">
 
   <div id="custom-cursor"
-    class="fixed top-0 left-0 w-4 h-4 bg-[#55e57c] rounded-full pointer-events-none z-[9999] transform -translate-x-1/2 -translate-y-1/2">
+    class="hidden md:block fixed top-0 left-0 w-4 h-4 bg-[#55e57c] rounded-full pointer-events-none z-[9999] transform -translate-x-1/2 -translate-y-1/2">
   </div>
 
   {% include 'pages/partials/navbar.html' %}
+  
   {% block content %} {% endblock %}
+  
   <script>
+    // Check if the user is on a touch device
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const cursor = document.getElementById('custom-cursor');
 
-    // Mouse move event listener
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-    });
+    // Only run the custom cursor logic if it's NOT a touch device
+    if (!isTouchDevice) {
+      // Mouse move event listener
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      });
 
-    // Hide cursor when mouse leaves the window
-    document.addEventListener('mouseout', () => {
-      cursor.style.display = 'none';
-    });
+      // Hide cursor when mouse leaves the window
+      document.addEventListener('mouseout', () => {
+        cursor.style.display = 'none';
+      });
 
-    // Show cursor when mouse enters the window
-    document.addEventListener('mouseover', () => {
-      cursor.style.display = 'block';
-    });
+      // Show cursor when mouse enters the window
+      document.addEventListener('mouseover', () => {
+        cursor.style.display = 'block';
+      });
+    }
   </script>
+  
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
