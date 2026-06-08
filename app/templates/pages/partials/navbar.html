@@ -1,20 +1,91 @@
-<nav class="px-4 top-0 w-full pt-2 fixed z-50 pointer-events-none">
-    
-    <div class="flex justify-between items-center h-16 pointer-events-auto">
+<nav class="px-4 top-0 w-full pt-4 fixed z-50 pointer-events-none">
+    <div class="flex justify-between items-center h-16 pointer-events-auto mx-auto">
         
-        <a href="{{ url_for('dashboard.index') }}" class="text-white font-bold text-base sm:text-lg md:text-xl tracking-wide hover:text-green-400 transition-colors">
+        <a href="{{ url_for('dashboard.index') }}"
+            class="text-white font-bold text-lg md:text-2xl tracking-widest hover:text-emerald-400 transition-all duration-300 drop-shadow-md">
             MUKESH PRAJAPATI
         </a>
-        
-        <div>
-            <button
-                class="bg-white text-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-full w-auto gap-12 text-sm sm:text-base font-bold flex justify-between items-center hover:bg-green-400 hover:scale-105 transition-all duration-300 group">
-                Menu 
-                <span class="font-normal text-gray-500 group-hover:text-black transition-colors text-sm flex items-center gap-0">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-right"></i>
+
+        <div class="relative">
+            <button id="menu-btn"
+                class="bg-white/90 backdrop-blur-md text-gray-800 rounded-full shadow-lg px-6 py-2.5 text-sm sm:text-base font-semibold flex items-center gap-6 hover:bg-emerald-400 hover:text-white transition-all duration-300 border border-white/20 z-50 relative group">
+                <span>Menu</span>
+                <span class="flex items-center transition-transform duration-300 ease-in-out" id="menu-icon">
+                    <i class="fa-solid fa-chevron-down text-sm"></i>
                 </span>
             </button>
+
+            <div id="dropdown-menu"
+                class="absolute right-0 top-14 w-52 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 overflow-hidden opacity-0 invisible translate-y-[-15px] transition-all duration-300 ease-out z-40">
+                <div class="flex flex-col p-2">
+                    <a href="{{ url_for('dashboard.index') }}" 
+                        class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition-colors">
+                        <i class="fa-solid fa-house w-4"></i> Home
+                    </a>
+                    <a href="pages/about.html" 
+                        class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition-colors">
+                        <i class="fa-solid fa-user w-4"></i> About
+                    </a>
+                    <a href="pages/works.html" 
+                        class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition-colors">
+                        <i class="fa-solid fa-briefcase w-4"></i> Works
+                    </a>
+                    <a href="pages/blogs.html" 
+                        class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition-colors">
+                        <i class="fa-solid fa-pen-nib w-4"></i> Blogs
+                    </a>
+                    <a href="pages/contact.html" 
+                        class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition-colors">
+                        <i class="fa-solid fa-envelope w-4"></i> Contact
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                // Dropdown open animation classes
+                dropdownMenu.classList.remove('opacity-0', 'invisible', 'translate-y-[-15px]');
+                dropdownMenu.classList.add('opacity-100', 'visible', 'translate-y-0');
+                
+                // Button active styling & Icon rotation
+                menuIcon.style.transform = 'rotate(180deg)';
+                menuBtn.classList.replace('bg-white/90', 'bg-emerald-400');
+                menuBtn.classList.replace('text-gray-800', 'text-white');
+            } else {
+                // Dropdown close animation classes
+                dropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-[-15px]');
+                dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                
+                // Button revert styling & Icon rotation
+                menuIcon.style.transform = 'rotate(0deg)';
+                menuBtn.classList.replace('bg-emerald-400', 'bg-white/90');
+                menuBtn.classList.replace('text-white', 'text-gray-800');
+            }
+        }
+
+        // Click event on the Menu button
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents instant closing
+            toggleMenu();
+        });
+
+        // Close the dropdown if clicked outside of it
+        document.addEventListener('click', (event) => {
+            if (isMenuOpen && !dropdownMenu.contains(event.target)) {
+                toggleMenu();
+            }
+        });
+    });
+</script>

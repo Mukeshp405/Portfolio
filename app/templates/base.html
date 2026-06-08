@@ -22,6 +22,26 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <style>
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important; /* Forces Tailwind to not interfere */
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+  </style>
+
   <title>Mukesh Prajapati | Web & AI Developer</title>
 </head>
 
@@ -32,39 +52,45 @@
   </div>
 
   {% include 'pages/partials/navbar.html' %}
-  
+
   {% block content %} {% endblock %}
-  
+
   <script>
-    // Check if the user is on a touch device
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const cursor = document.getElementById('custom-cursor');
 
-    // Only run the custom cursor logic if it's NOT a touch device
     if (!isTouchDevice) {
-      // Mouse move event listener
       document.addEventListener('mousemove', (e) => {
         cursor.style.left = `${e.clientX}px`;
         cursor.style.top = `${e.clientY}px`;
       });
-
-      // Hide cursor when mouse leaves the window
       document.addEventListener('mouseout', () => {
         cursor.style.display = 'none';
       });
-
-      // Show cursor when mouse enters the window
       document.addEventListener('mouseover', () => {
         cursor.style.display = 'block';
       });
     }
   </script>
-  
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
       once: true,
     });
+  </script>
+
+  <script>
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   </script>
 </body>
 
