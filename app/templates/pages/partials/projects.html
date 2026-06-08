@@ -1,13 +1,10 @@
-{% extends 'base.html' %}
-{% block content %}
-
 <section class="bg-[radial-gradient(circle_at_top,_#000000_100%,_#111111_60%,_#1A241E_5%)] px-6 md:px-12 lg:px-24 pb-20 pt-20">
     
-    <div class="container mx-auto py-12 flex flex-col items-start lg:items-center gap-4 lg:gap-0 text-center">
+    <div class="container mx-auto py-12 flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-0">
         <h1 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" class="font-bold text-green-400 w-full lg:mb-8">
             // Explore Work
         </h1>
-        <h3 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="text-3xl md:text-4xl lg:text-5xl text-gray-400 w-2/5 text-center font-bold text-white">
+        <h3 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="text-3xl md:text-4xl lg:text-5xl text-gray-400 w-full font-bold text-white">
             A Showcase of My Latest Projects
         </h3>
     </div>
@@ -98,5 +95,3 @@
 
     </div>
 </section>
-{% include 'pages/footer.html' %}
-{% endblock %}

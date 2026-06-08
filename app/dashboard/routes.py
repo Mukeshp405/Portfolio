@@ -6,3 +6,7 @@ from app.models import Project
 @dashboard.route('/')
 def index():
     return render_template("pages/home.html")
+
+@dashboard.route('/projects')
+def projects():
+    return render_template("pages/projects.html")
