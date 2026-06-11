@@ -1,8 +1,8 @@
-<nav class="px-4 top-0 w-full pt-4 fixed z-50 pointer-events-none">
+<nav class="px-4 top-0 w-full pt-2 fixed z-50 pointer-events-none">
     <div class="flex justify-between items-center h-16 pointer-events-auto mx-auto">
         
         <a href="{{ url_for('dashboard.index') }}"
-            class="text-white font-bold text-lg md:text-2xl tracking-widest hover:text-emerald-400 transition-all duration-300 drop-shadow-md">
+            class="text-white font-bold text-lg tracking-widest hover:text-emerald-400 transition-all duration-300 drop-shadow-md">
             MUKESH PRAJAPATI
         </a>
 
@@ -22,7 +22,7 @@
                         class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition-colors">
                         <i class="fa-solid fa-house w-4"></i> Home
                     </a>
-                    <a href="pages/about.html" 
+                    <a href="{{ url_for('dashboard.about') }}" 
                         class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition-colors">
                         <i class="fa-solid fa-user w-4"></i> About
                     </a>

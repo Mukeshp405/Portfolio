@@ -7,6 +7,10 @@ from app.models import Project
 def index():
     return render_template("pages/home.html")
 
+@dashboard.route("/about")
+def about():
+    return render_template("pages/about.html")
+
 @dashboard.route('/projects')
 def projects():
     return render_template("pages/projects.html")
