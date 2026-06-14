@@ -2,44 +2,160 @@
 {% block content %}
 
 <section
-    class="bg-[radial-gradient(circle_at_top,_#000000_100%,_#111111_60%,_#1A241E_5%)] px-6 md:px-12 lg:px-24 pb-20 pt-20">
+    class="bg-[radial-gradient(circle_at_top,_#000000_100%,_#111111_60%,_#1A241E_5%)] px-4 sm:px-6 md:px-12 lg:px-24 pb-20 pt-20 overflow-hidden">
 
-    <div class="container mx-auto py-12 flex flex-col items-center lg:items-center gap-4 lg:gap-0 text-center">
+    <div class="container mx-auto py-8 md:py-12 flex flex-col items-center gap-4 text-center">
         <h1 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" class="font-bold text-green-400 w-full">
             // Hello World
         </h1>
         <h3 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"
-            class="text-3xl md:text-4xl lg:text-7xl text-gray-400 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:leading-22 text-center font-bold text-white uppercase">
-            I'M a Full <br> Stack Developer
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white md:w-3/4 lg:w-2/3 xl:w-1/2 leading-tight lg:leading-[1.1] font-bold uppercase">
+            I'M a Full <br class="hidden sm:block"> Stack Developer
         </h3>
     </div>
 
-    <div class="flex justify-center items-center mt-10 flex-col ">
-        <img src="{{ url_for('static', filename='images/img13.png') }}" alt="Profile Image"
-            class="rounded-full w-[24rem] h-[28rem] object-cover shadow-lg shadow-green-600/40" data-aos="zoom-in-up"
-            data-aos-delay="300" data-aos-duration="1000">
+    <div class="flex justify-center items-center mt-6 md:mt-10 flex-col">
 
-        <div class="flex flex-col items-center mt-10 w-1/2 gap-5">
+        <div class="relative w-full flex justify-center items-center">
+            <img src="{{ url_for('static', filename='images/img13.png') }}" alt="Profile Image"
+                class="rounded-full w-64 h-72 sm:w-80 sm:h-96 md:w-[24rem] md:h-[28rem] z-50 object-cover shadow-lg shadow-green-600/40"
+                data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+
+            <!-- <marquee class="absolute w-full h-[5rem] top-1/2 flex items-center">
+                <div class="flex gap-10">
+                    <img src="{{ url_for('static', filename='programming icons/Anaconda.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Arduino.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/aws.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/bootstrap.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/C.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Canva.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/cpp.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/CSS3.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Digital Ocean.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Django.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Docker.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/FastAPI.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Figma.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Flask.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Gazebo.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Git.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Github.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/hostinger.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/HTML5.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/JavaScript.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/JSON.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Jupyter.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/langchain.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Linux.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Material UI.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Matplotlib.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/MongoDB.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/MySQL.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/NGINX.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/NPM.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Numpy.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/OpenCV.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Oracle.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Pandas.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/PostgreSQL.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Postman.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/PyCharm.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/python.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/PyTorch.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Raspberry Pi.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/React.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/restAPI.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/scikit-learn.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/seaborn.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/SQLAlchemy.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/SQLite.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Streamlit.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/TailwindCSS.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Vercel.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/Vite.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="{{ url_for('static', filename='programming icons/VScode.png') }}" alt="Glow Effect"
+                        class="w-10 h-10 data-aos=" zoom-in-up" data-aos-delay="300" data-aos-duration="1000">
+                    
+                </div>
+            </marquee> -->
+        </div>
+
+        <div class="flex flex-col items-center mt-8 md:mt-10 w-full sm:w-11/12 md:w-3/4 lg:w-1/2 gap-5 px-4">
             <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"
-                class="font-bold text-lg md:text-xl lg:text-2xl mt-8 lg:mt-12 max-w-3xl text-center">
-                I CRAFT FAST, SCALABLE, AND <span class="text-green-300">USER-FRIENDLY WEB</span> APPLICATIONS WITH
-                MODERN JAVASCRIPT FRAMEWORKS — COMBINING REACT ON THE FRONTEND WITH ROBUST <span
-                    class="text-green-300">SERVER-SIDE SOLUTIONS</span> USING NODE.JS.
+                class="font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-4 lg:mt-8 max-w-3xl text-center text-white">
+                I craft fast, scalable, and AI-powered web applications by combining modern frontend technologies with
+                robust backend solutions built using Python, Flask, and FastAPI—delivering seamless user experiences,
+                intelligent automation, and production-ready systems.
             </p>
             <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"
-                class="text-gray-400 max-w-3xl text-center">
-                I thrive on solving real-world problems, turning ideas into clean, maintainable code, and learning
-                through experimentation. You’ll find me building side projects, diving into new tech stacks, or simply
-                exploring web development.
+                class="text-sm sm:text-base text-gray-400 max-w-3xl text-center">
+                I thrive on creating scalable full-stack applications, AI-powered solutions, and automation workflows
+                that deliver real business value. Whether it’s building production-ready platforms, integrating
+                intelligent systems, or exploring emerging technologies, I’m always focused on writing clean and
+                efficient code.
             </p>
         </div>
-        <a href="{{ url_for('static', filename='resume/resume.pdf') }}" target="_blank" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1000" class="mt-8 inline-block">
-            <button class="bg-green-400 text-black font-bold py-3 px-6 rounded hover:bg-green-500 transition-colors">
+
+        <a href="{{ url_for('static', filename='resume/resume.pdf') }}" target="_blank" data-aos="zoom-in-up"
+            data-aos-delay="300" data-aos-duration="1000" class="mt-8 inline-block w-full sm:w-auto px-6 sm:px-0">
+            <button
+                class="bg-green-400 text-black font-bold py-3 px-8 rounded hover:bg-green-500 transition-colors w-full sm:w-auto">
                 My Resume
             </button>
         </a>
     </div>
 </section>
 {% include 'pages/partials/experience.html' %}
+{% include 'pages/partials/skills.html' %}
 {% include 'pages/footer.html' %}
 {% endblock %}
