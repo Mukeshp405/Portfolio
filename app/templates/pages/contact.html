@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section
+    class="bg-[radial-gradient(circle_at_top,_#000000_100%,_#111111_60%,_#1A241E_5%)] text-white px-6 sm:px-12 md:px-20 lg:px-32 py-20 min-h-screen flex items-center w-full">
+
+    <div class="container mx-auto flex flex-col lg:flex-row justify-between gap-16 lg:gap-24 w-full mt-16">
+        
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+            <h4 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" 
+                class="font-mono text-[#87ee96] mb-4 text-sm tracking-wide">
+                // Get In Touch
+            </h4>
+            <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"
+                class="text-5xl sm:text-6xl lg:text-7xl font-bold uppercase leading-18 mb-6">
+                Let’s Connect &<br>Collaborate
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"
+                class="text-gray-400 text-lg md:text-xl w-full lg:w-5/6 mb-12">
+                Have a project in mind? Let’s make it happen! Drop us a message, and we’ll connect with you soon.
+            </p>
+
+            <div data-aos="fade-up" data-aos-duration="1000" 
+                class="flex flex-wrap items-center gap-3 text-sm md:text-base font-medium mb-16">
+                <!-- <span class="text-[#87ee96]">/</span> 
+                <a href="#" class="hover:text-[#87ee96] transition-colors">Twitter (X)</a> -->
+                <span class="text-[#87ee96]">/</span> 
+                <a href="https://www.linkedin.com/in/mukesh-prajapati-5709782b1/" target="_blank" class="hover:text-[#87ee96] transition-colors">LinkedIn</a>
+                <span class="text-[#87ee96]">/</span> 
+                <a href="https://github.com/Mukeshp405" target="_blank" class="hover:text-[#87ee96] transition-colors">GitHub</a>
+                <!-- <span class="text-[#87ee96]">/</span> 
+                <a href="#" class="hover:text-[#87ee96] transition-colors">CodePen</a> -->
+            </div>
+
+            <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-duration="1000">
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <i class="fa fa-phone"></i>
+                    <span class="text-lg group-hover:text-[#87ee96] transition-colors">+91 7620182417</span>
+                </div>
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <svg class="w-6 h-6 text-white group-hover:text-[#87ee96] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="text-lg group-hover:text-[#87ee96] transition-colors">mukeshp1639@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-[45%] flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000">
+            <form action="#" class="flex flex-col gap-6">
+                <div class="flex flex-col gap-2">
+                    <label for="name" class="text-sm font-semibold tracking-wide">Name<span class="text-[#87ee96]">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required
+                        class="w-full bg-transparent border border-gray-800 rounded-md py-3 px-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#87ee96] transition-colors">
+                </div>
+                
+                <div class="flex flex-col gap-2">
+                    <label for="email" class="text-sm font-semibold tracking-wide">Email<span class="text-[#87ee96]">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Email address" required
+                        class="w-full bg-transparent border border-gray-800 rounded-md py-3 px-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#87ee96] transition-colors">
+                </div>
+                
+                <div class="flex flex-col gap-2">
+                    <label for="message" class="text-sm font-semibold tracking-wide">Project Description<span class="text-[#87ee96]">*</span></label>
+                    <textarea id="message" name="message" placeholder="Write your project details" rows="5" required
+                        class="w-full bg-transparent border border-gray-800 rounded-md py-3 px-4 text-white placeholder-gray-600 focus:outline-none focus:border-[#87ee96] transition-colors resize-none"></textarea>
+                </div>
+                
+                <div class="mt-2">
+                    <button type="submit" 
+                        class="bg-[#87ee96] text-black font-bold text-sm md:text-base py-3 px-8 rounded-full hover:bg-green-400 transition-colors inline-block w-max cursor-pointer">
+                        Send Your Message
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+{% include 'pages/footer.html' %}
+{% endblock %}

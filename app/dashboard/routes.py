@@ -14,3 +14,7 @@ def about():
 @dashboard.route('/projects')
 def projects():
     return render_template("pages/projects.html")
+
+@dashboard.route('/contact')
+def contact():
+    return render_template("pages/contact.html")
