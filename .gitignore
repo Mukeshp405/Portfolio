@@ -1,7 +1,57 @@
-env/
-venv/
+# Python
 __pycache__/
-.env
-instance/
-*.pyc
+
+# Virtual Environment
+venv/
+env/
+.venv/
+ENV/
 node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Flask
+instance/
+.webassets-cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets / Keys
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.temp
